@@ -1,9 +1,16 @@
 package com.atmecs.swaglabs.testscript;
 
+import java.util.List;
 import java.util.Properties;
 
+import org.openqa.selenium.By;
+//import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+//import org.testng.Assert;
 import org.testng.annotations.Test;
 
+//import com.atmecs.falcon.FilePath;
+//import com.atmecs.falcon.locationreader.ExcelReader;
 import com.atmecs.swaglabs.datalocators.DataLocators;
 import com.atmecs.swaglabs.datalocators.UserLocators;
 import com.atmecs.swaglabs.helpers.CommonHelpers;
@@ -14,7 +21,6 @@ public class TestSript extends BaseClass {
 	DataLocators path_name = new DataLocators();
 	UserLocators user_data = new UserLocators();
 
-	@Test
 	public void login() throws Exception {
 		path_name.getPathData();
 		user_data.getTestData();
@@ -31,5 +37,5 @@ public class TestSript extends BaseClass {
 		CommonHelpers.SendkeysAction(driver, path_name.getZipcode(), user_data.getZipcode());
 		CommonHelpers.clickAction(driver, path_name.getContinuebutton());
 		CommonHelpers.clickAction(driver, path_name.getClickbutton());
-}
+		}
 }
